@@ -19,20 +19,20 @@ client = discord.Client()
 
 @client.event
 async def on_message(message):
-    id = client.get_guild(551076327025803291)
+    id = client.get_guild(511573334966665226)
     channels = ["commands"]
 
 @client.event
 async def on_member_join(member):
     for channel in member.server.channels:
-        if channel.name == 'general':
+        if channel.name == 'teszt':
             await client.send_message(channel, f"Üdvözöllek, {member.mention}! Kérlek olvasd el a #❌szabályzat❌-ot!")
                                      
            
 @client.event
 async def on_member_remove(member):
     for channel in member.server.channels:
-        if channel.name == 'general':
+        if channel.name == 'teszt':
             await client.send_message(channel, f"Itt hagyott minket {member.mention}!")
     
 @client.event
