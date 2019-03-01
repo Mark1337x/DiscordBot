@@ -43,9 +43,9 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content == '!event':
-        await client.send_message(message.channel,'Hétvégi eventeink a következők: **Okey kártya :okey:** event **szombat 23:59-ig**,')
-        await client.send_message(message.channel,'**Hatszög kincsesláda :hatszog:** event **szombat 23:59-ig**,')
-        await client.send_message(message.channel,'**Holdfény kincsesláda :HF:** event **szombat 23:59-től vasárnap 23:59-ig**,')
+        await client.send_message(message.channel,'**Hétvégi eventeink a következők: **Okey kártya** event __**szombat 23:59-ig__**,')
+        await client.send_message(message.channel,'**Hatszög kincsesláda :hatszog: event __szombat 23:59-ig**__,')
+        await client.send_message(message.channel,'**Holdfény kincsesláda event szombat __23:59-től vasárnap 23:59-ig__**,')
         await client.send_message(message.channel,'**Ezen felül +30% tárgy dropp van a szerveren, egész hétvégén!**')
         await client.send_message(message.channel,'**(2019.03.02-03.03)**')
         
