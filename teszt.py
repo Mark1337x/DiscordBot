@@ -26,7 +26,7 @@ async def on_message(message):
 async def on_member_join(member):
     for channel in member.server.channels:
         if channel.name == 'lobby':
-            await client.send_message(channel, f"Üdvözöllek, {member.mention}! Kérlek olvasd el a #szabályzat !")
+            await client.send_message(channel, f"Üdvözöllek, {member.mention}!")
                                      
            
 @client.event
@@ -42,8 +42,12 @@ async def on_ready():
     
 @client.event
 async def on_message(message):
-    if message.content == '!teszteles':
-        await client.send_message(message.channel,'Ez egy teszt')
+    if message.content == '!event':
+        await client.send_message(message.channel,'Hétvégi eventeink a következők: **Okey kártya :okey:** event **szombat 23:59-ig**,')
+        await client.send_message(message.channel,'**Hatszög kincsesláda :hatszog:** event **szombat 23:59-ig**,')
+        await client.send_message(message.channel,'**Holdfény kincsesláda :HF:** event **szombat 23:59-től vasárnap 23:59-ig**,')
+        await client.send_message(message.channel,'**Ezen felül +30% tárgy dropp van a szerveren, egész hétvégén!**')
+        await client.send_message(message.channel,'**(2019.03.02-03.03)**')
         
     
 client.run('NTE2MDM2MTM5MjQ1ODk1NzAx.D1rihg.LxhU3j9lN_Db1tZZgsgkQc2GR6I')
