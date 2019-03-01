@@ -26,7 +26,7 @@ async def on_message(message):
 async def on_member_join(member):
     for channel in member.server.channels:
         if channel.name == 'teszt':
-            await client.send_message(channel, f"Üdvözöllek, {member.mention}! Kérlek olvasd el a #❌szabályzat❌-ot!")
+            await client.send_message(channel, f"Üdvözöllek, {member.mention}! Kérlek olvasd el a #szabályzat !")
                                      
            
 @client.event
