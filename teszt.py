@@ -50,5 +50,9 @@ async def on_message(message):
         await client.send_message(message.channel,'**Ezen felül +30% tárgy dropp van a szerveren, egész hétvégén!**')
         await client.send_message(message.channel,'**(2019.03.02-03.03)**')
         
+@client.event
+async def on_message(message):
+    if message.content == '!szerver':
+          await client.send_message(message.channel,'A szerver jelenleg online, az utolsó patch 03-01-2019 11:08 PM!')
     
 client.run('NTE2MDM2MTM5MjQ1ODk1NzAx.D1rihg.LxhU3j9lN_Db1tZZgsgkQc2GR6I')
