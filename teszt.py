@@ -43,7 +43,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content == '!event':
-        await client.send_message(message.channel,**'Hétvégi eventeink a következők:')
+        await client.send_message(message.channel,'**Hétvégi eventeink a következők:')
         await client.send_message(message.channel,'**Okey kártya event __szombat 23:59-ig__**,')
         await client.send_message(message.channel,'**Hatszög kincsesláda event __szombat 23:59-ig__**,')
         await client.send_message(message.channel,'**Holdfény kincsesláda event szombat __23:59-től vasárnap 23:59-ig__**,')
